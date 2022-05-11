@@ -1,0 +1,86 @@
+.Main {
+  background: #EDF7FF;
+  padding: 66px 0;
+  min-height: 100vh;
+  color: #242632;
+}
+.Main__row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.Main__row_countries {
+  padding: 18px 25px;
+  background: #FFFFFF;
+  border-radius: 5px;
+}
+.Main__row_countries select {
+  background: #FFFFFF;
+  font-weight: 500;
+  font-size: 22px;
+  border: none;
+  outline: none;
+}
+.Main__statistics {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  width: 100%;
+  align-items: flex-start;
+}
+.Main__statistics_record {
+  margin-left: 20px;
+  padding: 40px 60px 20px;
+  background: #1BBC9B;
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+.Main__statistics_week {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.Main__statistics_week-card {
+  justify-content: space-between;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  width: 800px;
+  height: 142px;
+}
+.Main__statistics_week-card .date {
+  font-weight: 500;
+  font-size: 22px;
+}
+.Main__statistics_week-card .statistics {
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.Main__statistics_week-card .statistics__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+.Main__statistics_week-card .statistics__info span {
+  font-weight: 700;
+  font-size: 18px;
+  padding: 10px;
+  background: #EDF7FF;
+  border-radius: 5px;
+}
+.Main__statistics_week-card .statistics__up {
+  display: flex;
+  column-gap: 20px;
+}
+.Main__statistics_week-card .statistics__down {
+  display: flex;
+  column-gap: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -32,7 +32,7 @@ const Main = () => {
         axios("https://api.covid19api.com/countries")
             .then(({data}) => setCountries(data));
 
-        if (localStorage.getItem("country") !== '') {
+        if (localStorage.getItem("country") !== null) {
             setCountryNow(localStorage.getItem("country"))
         }
         else {

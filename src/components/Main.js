@@ -41,8 +41,8 @@ const Main = () => {
 
     }, []);
 
-    useEffect( () => {
-         axios(`https://api.covid19api.com/country/${countryNow}`)
+    useEffect(() => {
+        axios(`https://api.covid19api.com/country/${countryNow}`)
             .then(({data}) => setLastDays(data.slice(data.length - 5)));
     }, [countryNow]);
 
@@ -112,10 +112,18 @@ const Main = () => {
                         {record !== ""
                             ? <div className="Main__statistics_record">
                                 <h3>Top recovered cases</h3>
-                                <span>
-                                    {record}
+                                <span className="recovered">
+                                    {lastDays.length !== 0
+                                        ? lastDays[record].Recovered
+                                        : ""
+                                    }
                                 </span>
-
+                                <span className="recovered__date">
+                                    {lastDays.length !== 0
+                                        ? `${lastDays[record].Date.split("-")[2].slice(0, 2)} ${months[lastDays[record].Date.split("-")[1]]}`
+                                        : ""
+                                    }
+                                </span>
                             </div>
                             : ""
                         }

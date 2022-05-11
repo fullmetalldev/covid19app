@@ -35,6 +35,9 @@ const Main = () => {
         if (localStorage.getItem("country") !== '') {
             setCountryNow(localStorage.getItem("country"))
         }
+        else {
+            setCountryNow("Kyrgyzstan")
+        }
 
         let maxIndex = countries.reduce((acc, curr, i) => countries[acc].Recovered > curr.Recovered ? acc : i, 0);
         setRecord([maxIndex])

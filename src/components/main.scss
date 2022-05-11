@@ -10,17 +10,22 @@
     align-items: flex-start;
 
     &_countries {
+      transition: 0.3s;
       padding: 18px 25px;
       background: #FFFFFF;
       border-radius: 5px;
-
       select {
+        cursor: pointer;
         background: #FFFFFF;
         font-weight: 500;
         font-size: 22px;
         border: none;
         outline: none;
       }
+    }
+    &_countries:hover{
+      transition: 0.3s;
+      box-shadow: 4px 4px 8px 3px rgba(34, 60, 80, 0.2);
     }
   }
 
@@ -31,6 +36,7 @@
     width: 100%;
     align-items: flex-start;
     &_record{
+      transition: 0.3s;
       margin-left: 20px;
       padding: 40px 60px 20px;
       background: #1BBC9B;
@@ -44,10 +50,13 @@
         font-size: 100px;
         margin: 30px 0;
       }
-      .recovered__date{
-
-      }
     }
+    &_record:hover{
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 4px 4px 8px 3px rgba(34, 60, 80, 0.2);
+    }
+
 
     &_week {
       margin-top: 40px;
@@ -56,6 +65,7 @@
       row-gap: 20px;
 
       &-card {
+        transition: 0.3s;
         justify-content: space-between;
         padding: 20px;
         background: #FFFFFF;
@@ -100,6 +110,11 @@
             column-gap: 20px;
           }
         }
+      }
+      &-card:hover{
+        cursor: pointer;
+        transition: 0.3s;
+        box-shadow: 4px 4px 8px 3px rgba(34, 60, 80, 0.2);
       }
     }
   }

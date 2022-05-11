@@ -34,8 +34,7 @@ const Main = () => {
 
         if (localStorage.getItem("country") !== null) {
             setCountryNow(localStorage.getItem("country"))
-        }
-        else {
+        } else {
             setCountryNow("Kyrgyzstan")
         }
 
@@ -112,23 +111,27 @@ const Main = () => {
 
                         </div>
 
-                        {record !== ""
-                            ? <div className="Main__statistics_record">
-                                <h3>Top recovered cases</h3>
-                                <span className="recovered">
+                        {
+                            lastDays.length !== 0
+                                ? record !== ""
+                                ? <div className="Main__statistics_record">
+                                    <h3>Top recovered cases</h3>
+                                    <span className="recovered">
                                     {lastDays.length !== 0
                                         ? lastDays[record].Recovered
                                         : ""
                                     }
                                 </span>
-                                <span className="recovered__date">
+                                    <span className="recovered__date">
                                     {lastDays.length !== 0
                                         ? `${lastDays[record].Date.split("-")[2].slice(0, 2)} ${months[lastDays[record].Date.split("-")[1]]}`
                                         : ""
                                     }
                                 </span>
-                            </div>
-                            : ""
+                                </div>
+                                : ""
+
+                                : ""
                         }
 
                     </div>
